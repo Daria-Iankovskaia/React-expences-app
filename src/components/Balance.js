@@ -4,7 +4,6 @@ import { TransactionHistoryContext } from "../context/TransactionHistoryState";
 export const Balance = () => {
 
     const { transactions } = useContext(TransactionHistoryContext);
-    debugger;
     const total = transactions
     .map(transaction => transaction.amount)
     .reduce((acc, item) => (acc += item), 0)

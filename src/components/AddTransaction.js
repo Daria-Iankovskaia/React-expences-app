@@ -7,7 +7,6 @@ export const AddTransaction = () => {
     const { addTransaction } = useContext(TransactionHistoryContext);
 
     const onSubmit = e => {
-        debugger;
         e.preventDefault();
         const newTransaction = {
             id: Math.floor(Math.random() * 100000000),
