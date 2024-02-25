@@ -17,7 +17,7 @@ function App() {
         <AddTransaction />
       </div>
     </TransactionHistoryProvider>
-  );
-}
+  )
+};
 
 export default App;
