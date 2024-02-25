@@ -2,12 +2,12 @@ import React, { useContext } from "react"
 import { TransactionHistoryContext } from "../context/TransactionHistoryState";
 
 export const Balance = () => {
-
     const { transactions } = useContext(TransactionHistoryContext);
+
     const total = transactions
-    .map(transaction => transaction.amount)
-    .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2);
+        .map(transaction => transaction.amount) // will get an [] of amounts
+        .reduce((acc, item) => (acc += item), 0) // calculate the total amount
+        .toFixed(2);
 
     return (
         <>
@@ -15,4 +15,4 @@ export const Balance = () => {
             <h1>${total}</h1>
         </>
     )
-}
+};
